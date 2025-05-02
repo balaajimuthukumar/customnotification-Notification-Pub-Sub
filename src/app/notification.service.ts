@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { DialogData, ToastMessage } from 'src/core/models/model';
+import { DialogData, ToastMessage } from '../core/models/model';
 
 @Injectable({
   providedIn: 'root'

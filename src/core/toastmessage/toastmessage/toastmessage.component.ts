@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NotificationService } from 'src/app/notification.service';
-import { ToastMessage } from 'src/core/models/model';
+import { NotificationService } from '../../../app/notification.service';
+import { ToastMessage } from '../../../core/models/model';
 
 @Component({
   selector: 'app-toastmessage',

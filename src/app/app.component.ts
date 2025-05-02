@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NotificationService } from './notification.service';
-import { DialogData, ToastMessage } from 'src/core/models/model';
+import { DialogData, ToastMessage } from '../core/models/model';
 
 @Component({
   selector: 'app-root',
