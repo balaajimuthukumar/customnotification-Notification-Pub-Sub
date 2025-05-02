@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+// Variables for theme customization
+$toast-width: 300px;
+$toast-padding: 1rem;
+$toast-border-radius: 6px;
+$toast-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+$toast-z-index: 9999;
+$toast-gap: 1rem;
+
+$toast-colors: (
+  info: #2196f3,
+  success: #4caf50,
+  warn: #ff9800,
+  error: #f44336
+);
+
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: $toast-gap;
+  z-index: $toast-z-index;
+}
+
+.toast {
+  width: $toast-width;
+  padding: $toast-padding;
+  border-radius: $toast-border-radius;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  box-shadow: $toast-box-shadow;
+
+  &.info    { background-color: map-get($toast-colors, info); }
+  &.success { background-color: map-get($toast-colors, success); }
+  &.warn    { background-color: map-get($toast-colors, warn); }
+  &.error   { background-color: map-get($toast-colors, error); }
+
+  .toast-title {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .toast-message {
+    font-size: 0.95rem;
+  }
+
+  .toast-close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  position: relative;
+}
+
+// animation: slideIn 0.3s ease forwards, fadeOut 0.5s ease 4.5s forwards;
+.slide-in {
+  animation: 0.1s infinite slideIn;
+}
+
+.fade-out {
+  animation: 5s infinite fadeOut;
+}
+// Animation
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
